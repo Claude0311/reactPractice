@@ -1,13 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import ScoreCard from './App';
 import * as serviceWorker from './serviceWorker';
+
+const who = "Ric"; 
+const columnIndex = ["Subject", "Score"]; 
+const scoreCard = { 
+    name: `${who}`, 
+    records: [ 
+        ["Math", 100], 
+        ["Phy",100],
+        ["Chinese", 87] 
+    ], 
+};
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ScoreCard scoreCard={scoreCard}
+      columnIndex={columnIndex}/>
   </React.StrictMode>,
+  // <h1>Hello, world!</h1>, 
   document.getElementById('root')
 );
 
